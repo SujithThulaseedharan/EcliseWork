@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Trello_Board_Workflow]">
+  <listeners>
+    <listener class-name="ExtentReport.ExtentListner"/>
+  </listeners>
+  <test name="Board_Tests">
+    <classes>
+      <class name="com.trello.workflow.CreateBoardTests"/>
+      <class name="com.trello.workflow.UpdateBoardsTests"/>
+    </classes>
+  </test> <!-- Board_Tests -->
+  <test name="Board_Tests(failed)">
+    <classes>
+      <class name="com.trello.workflow.UpdateBoardsTests">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.trello.workflow.UpdateBoardsTests -->
+      <class name="com.trello.workflow.CreateBoardTests">
+        <methods>
+          <include name="createBoardWithCustomLists"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.trello.workflow.CreateBoardTests -->
+    </classes>
+  </test> <!-- Board_Tests(failed) -->
+</suite> <!-- Failed suite [Trello_Board_Workflow] -->

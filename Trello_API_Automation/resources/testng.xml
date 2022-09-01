@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Trello_Board_Workflow" >
+	<listeners>
+	<listener class-name="ExtentReport.ExtentListner"></listener>
+	</listeners>
+	
+	<test name = "Board_Tests">
+	
+	<classes>
+		<class name="com.trello.workflow.CreateBoardTests"/>
+		<class name="com.trello.workflow.UpdateBoardsTests"/>
+		<class name="com.trello.workflow.DeleteBoardTests"/>
+	</classes>
+	</test>
+</suite>
